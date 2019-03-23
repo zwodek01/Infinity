@@ -1,0 +1,214 @@
+.contact {
+    font-family: "Mada";
+    &__content {
+        @include content-position;
+        box-sizing: border-box;
+        padding-top: 85px;
+        margin-bottom: 90px;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        padding: 0 30px;
+        font-family: "Homenaje";
+    }
+    &__description,
+    &__form {
+        margin: 0 105px;
+        color: #373737;
+        letter-spacing: -1px;
+    }
+    &__description {
+        margin-bottom: 55px;
+        font-size: $description-font-size-desktop-large;
+        line-height: 30px;
+        &--bold {
+            font-weight: bold;
+        }
+    }
+    &__form {
+        font-size: 30px;
+        line-height: 42px;
+    }
+}
+
+.header {
+    &__title {
+        font-size: $title-font-size-desktop-large;
+    }
+    &__button {
+        padding: 0 18px;
+        border: none;
+        border-radius: 3px;
+        height: 42px;
+        background-color: #61bf17;
+        color: #fff;
+        font-size: 22px;
+        line-height: 42px;
+        letter-spacing: -1px;
+    }
+    &__button::after {
+        content: "↑";
+        position: relative;
+        bottom: 3px;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+}
+
+.form {
+    &__text-input {
+        position: relative;
+        bottom: 3px;
+        border: none;
+        border-bottom: 1px solid #373737;
+        width: 220px;
+    }
+    &__text-input:focus {
+        outline-width: 0;
+    }
+    &__text-input--short {
+        width: 174px;
+    }
+    &__text-input::placeholder {
+        position: relative;
+        bottom: 3px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    &__checkbox {
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        margin-top: 30px;
+        background-color: #ffffff;
+        border: 1px solid #d5d5d5;
+    }
+    &__checkbox:checked {
+        border: 1px solid #61bf17;
+        background-color: #61bf17;
+    }
+    &__checkbox:hover {
+        cursor: pointer;
+    }
+    &__checkbox:focus {
+        outline: none;
+    }
+    &__label {
+        vertical-align: text-bottom;
+        font-size: 16px;
+        letter-spacing: 0px;
+    }
+    &__label:hover {
+        cursor: pointer;
+    }
+    &__submit {
+        display: block;
+        margin: 55px auto 0;
+        height: 42px;
+        padding: 0 10px;
+        border: none;
+        border-radius: 3px;
+        outline: none;
+        background-color: #61bf17;
+        color: #fff;
+        font-family: "Homenaje";
+        font-size: 22px;
+        letter-spacing: -1px;
+    }
+    &__submit:hover {
+        cursor: pointer;
+    }
+    &__submit::after {
+        content: "→";
+        padding-left: 43px;
+    }
+}
+
+@media (max-width: $breakpoint-desktop) {
+    .contact {
+        &__content {
+            width: $desktop-content-width;
+        }
+        &__form,
+        &__description {
+            margin: 20px 36px;
+        }
+        &__form {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .contact {
+        &__content {
+            width: 100%;
+        }
+        &__description {
+            font-size: $description-font-size-tablet;
+        }
+        .header {
+            &__title {
+                font-size: $title-font-size-tablet;
+            }
+            &__button {
+                font-size: 18px;
+            }
+        }
+        .form {
+            &__text-input {
+                width: 97%;
+            }
+            &__checkbox {
+                width: 15px;
+                height: 15px;
+            }
+            &__label {
+                vertical-align: super;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .contact {
+        &__content {
+            padding-top: 50px;
+            margin-bottom: 40px;
+        }
+        &__header {
+            margin-bottom: 40px;
+        }
+        &__description {
+            line-height: 26px;
+            font-size: $description-font-size-mobile;
+        }
+        &__form {
+            font-size: $description-font-size-desktop-large;
+        }
+        .header {
+            &__title {
+                width: 100%;
+                text-align: center;
+                font-size: $title-font-size-mobile;
+            }
+            &__button {
+                display: none;
+            }
+        }
+        .form {
+            &__label {
+                font-size: 12px;
+            }
+            &__agreement {
+                line-height: 20px;
+            }
+            &__submit {
+                margin-top: 40px;
+            }
+        }
+    }
+}

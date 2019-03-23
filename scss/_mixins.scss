@@ -1,0 +1,8 @@
+@mixin background-size {
+    height: 100%;
+    width: 100%;
+}
+@mixin content-position {
+    margin: 0 auto;
+    width: $content-width;
+}

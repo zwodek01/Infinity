@@ -1,0 +1,226 @@
+.clients {
+    height: 720px;
+    background-image: url("../images/trianglify.png");
+    background-size: cover;
+    &__title {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        color: $color-white;
+        font-size: $title-font-size-desktop-large;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+    &__slider {
+        @include content-position;
+    }
+}
+
+.slider {
+    &__slide {
+        display: flex;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 1s, opacity 1s;
+        &#{&}--active {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &__pins {
+        position: relative;
+        top: 340px;
+        text-align: center;
+        color: $color-white;
+    }
+}
+
+.slide {
+    &__image {
+        max-width: 340px;
+        max-height: 380px;
+        &-wrapper {
+            height: 380px;
+            width: 340px;
+            text-align: center;
+        }
+    }
+    &__text::before {
+        content: "„";
+        position: relative;
+        top: 10px;
+        right: 40px;
+        color: $color-dark-gray;
+        line-height: 20px;
+        font-size: 80px;
+    }
+    &__text {
+        width: 510px;
+        margin-left: 40px;
+        font-family: "Mada";
+        letter-spacing: -1px;
+    }
+    &__description {
+        font-size: 30px;
+        line-height: 42px;
+        color: $color-gray;
+    }
+    &__signature {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        font-size: $description-font-size-desktop-large;
+        color: #1c1b1b;
+        &--link {
+            color: $color-white;
+        }
+    }
+}
+
+.tags {
+    &__tag {
+        margin-right: 3px;
+        padding: 2px 10px;
+        border: 1px solid $color-white;
+        color: $color-white;
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+}
+
+.pins {
+    &__pin {
+        width: 32px;
+        opacity: 0.5;
+        &--active {
+            opacity: 1;
+        }
+    }
+    &__pin:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: $breakpoint-desktop) {
+    .clients {
+        &__slider {
+            width: $desktop-content-width;
+        }
+    }
+    .slide {
+        &__text {
+            width: 350px;
+        }
+        &__description {
+            line-height: 35px;
+            font-size: 28px;
+        }
+        &__signature {
+            margin-top: 25px;
+            margin-bottom: 35px;
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .clients {
+        height: 450px;
+        &__slider {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        &__title {
+            padding-top: 50px;
+            font-size: $title-font-size-tablet;
+        }
+    }
+    .slider {
+        &__pins {
+            top: 250px;
+        }
+    }
+    .slide {
+        &__image {
+            max-width: 200px;
+            max-height: 225px;
+            &-wrapper {
+                width: 200px;
+                height: 225px;
+            }
+        }
+        &__text {
+            width: 230px;
+            margin-left: 20px;
+        }
+        &__text::before {
+            right: 30px;
+            font-size: 50px;
+        }
+        &__description {
+            line-height: 30px;
+            font-size: 20px;
+        }
+        &__signature {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-size: $description-font-size-tablet;
+        }
+        &__tags {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .clients {
+        &__title {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: $title-font-size-mobile;
+        }
+    }
+    .slider {
+        &__slide {
+            display: block;
+            &#{&}--active {
+                display: block;
+            }
+        }
+        &__pins {
+            top: 310px;
+        }
+    }
+    .slide {
+        &__image {
+            max-width: 125px;
+            max-height: 140px;
+            &-wrapper {
+                width: 125px;
+                height: 140px;
+                margin: 0 auto;
+            }
+        }
+        &__text {
+            width: 235px;
+            margin: 0 auto;
+        }
+        &__text::before {
+            right: 20px;
+            font-size: 32px;
+        }
+        &__description {
+            line-height: 22px;
+            font-size: $description-font-size-mobile;
+        }
+        &__signature {
+            font-size: 14px;
+        }
+    }
+    .pins {
+        &__pin {
+            width: 16px;
+            font-size: 10px;
+        }
+    }
+}

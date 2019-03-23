@@ -1,0 +1,83 @@
+.header {
+    height: $header-height;
+    width: 100%;
+    background-image: url("../images/chips-circuit-board-computer.png");
+    background-position: bottom;
+    background-size: cover;
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        opacity: 0.9;
+        width: 100%;
+        height: $header-height;
+        background-image: linear-gradient(-39deg, #ffae12 0%, #33a115 60%, #0f171e 100%);
+    }
+    &__background {
+        position: relative;
+        z-index: 1;
+    }
+    &__background::after {
+        content: "";
+        position: absolute;
+        opacity: 0.3;
+        top: 0;
+        width: 100%;
+        height: $header-height;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAPUlEQVQoU2NkQAX/GRgYGJGEniFzMCQZGBikYAqwSoJMAinAKQlTgOyKZyBjcbkBQxLZDVglYVbglAQpAAAITA/VgCXC3AAAAABJRU5ErkJggg==") repeat;
+    }
+    &__content {
+        @include content-position;
+        position: relative;
+        z-index: 3;
+    }
+    &__slogan {
+        padding-top: 245px;
+        color: $color-white;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 58px;
+        letter-spacing: -1px;
+        line-height: 61px;
+    }
+}
+
+.slogan {
+    &__second-line {
+        display: block;
+        color: #333;
+    }
+}
+
+@media (max-width: $breakpoint-desktop) {
+    .header {
+        &__content {
+            width: $desktop-content-width;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .header {
+        &__content {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .header {
+        height: $header-height-mobile;
+        &::after {
+            height: $header-height-mobile;
+        }
+        &__background::after {
+            height: $header-height-mobile;
+        }
+        &__slogan {
+            padding-top: 100px;
+            font-size: 50px;
+        }
+    }
+}

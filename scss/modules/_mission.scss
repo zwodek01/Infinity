@@ -1,0 +1,84 @@
+.mission {
+    &__content {
+        @include content-position;
+        padding-top: 85px;
+        padding-bottom: 160px;
+    }
+    &__title {
+        margin-bottom: 40px;
+        text-align: center;
+        color: $color-dark-gray;
+        font-family: "Homenaje";
+        font-size: $title-font-size-desktop-large;
+        line-height: 56px;
+        letter-spacing: -1px;
+    }
+    &__text::before {
+        content: "„";
+        position: relative;
+        bottom: 3px;
+        right: 34px;
+        display: block;
+        color: $color-dark-gray;
+        font-size: 61px;
+        line-height: 8px;
+        letter-spacing: -2px;
+    }
+    &__text {
+        margin: 0 130px;
+        color: $color-gray;
+        font-family: "Mada";
+        font-size: $description-font-size-desktop-large;
+        line-height: 40px;
+        letter-spacing: -1px;
+    }
+}
+
+@media (max-width: $breakpoint-desktop) {
+    .mission {
+        &__content {
+            width: $desktop-content-width;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .mission {
+        &__content {
+            width: 100%;
+            padding-bottom: 90px;
+        }
+        &__title {
+            font-size: $title-font-size-tablet;
+        }
+        &__text {
+            margin: 0 48px;
+            font-size: $description-font-size-tablet;
+        }
+        &__text::before {
+            font-size: 54px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .mission {
+        &__content {
+            padding-top: 50px;
+            padding-bottom: 40px;
+        }
+        &__title {
+            margin-bottom: 20px;
+            font-size: $title-font-size-mobile;
+        }
+        &__text {
+            margin: 0 48px;
+            line-height: 32px;
+            font-size: $description-font-size-mobile;
+        }
+        &__text::before {
+            right: 22px;
+            font-size: 40px;
+        }
+    }
+}
