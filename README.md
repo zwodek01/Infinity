@@ -1,5 +1,10 @@
 # Infinity
 
-Infinity Group
+Simple website from template.
 
-Prace można obejrzeć na stronie: https://zwodek01.github.io/Infinity/
+## Technologies
+-HTML
+-CSS
+-JavaScript
+
+Live demo: https://zwodek01.github.io/Infinity/
