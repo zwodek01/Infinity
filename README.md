@@ -3,8 +3,10 @@
 Simple website from template.
 
 ## Technologies
--HTML
--CSS
--JavaScript
+- HTML
+- CSS
+- JavaScript
 
 Live demo: https://zwodek01.github.io/Infinity/
+
+[(https://i.imgur.com/mDPL5Hc.jpg)]
