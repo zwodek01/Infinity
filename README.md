@@ -9,4 +9,4 @@ Simple website from template.
 
 Live demo: https://zwodek01.github.io/Infinity/
 
-[(https://i.imgur.com/mDPL5Hc.jpg)]
+![Example View](https://i.imgur.com/mDPL5Hc.jpg)
